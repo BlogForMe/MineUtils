@@ -1,0 +1,2 @@
+include ':app',':androidUtil'
+project(':androidUtil').projectDir = new File('../Jykot/androidUtil')
