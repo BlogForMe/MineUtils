@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_report_ill"
+        android:icon="@mipmap/doc_ic_dynamic_report_ill"
+        android:title="上报病情" />
+
+    <item
+        android:id="@+id/action_appoint_expert"
+        android:icon="@mipmap/doc_ic_dynamic_appoint_expert"
+        android:title="预约专家" />
+
+    <item
+        android:id="@+id/action_phone_call"
+        android:icon="@mipmap/doc_ic_dynamic_phone_call"
+        android:title="拨打电话" />
+</menu>

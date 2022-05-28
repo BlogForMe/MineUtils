@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.comm.util.storage.StorageActivity">
+
+    <Button
+        android:id="@+id/bt_prmissions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btPermission"
+        android:text="checkPrmissions" />
+
+    <Button
+        android:id="@+id/bt_createFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btCreateFile"
+        android:text="createFile"
+        app:layout_constraintTop_toBottomOf="@+id/bt_prmissions" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btFile"
+        android:text="生成文件" />
+
+    <Button
+        android:id="@+id/bt_privatefile_crate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

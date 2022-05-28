@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".openlib.rxretrofit.lambda.LambdaActivity">
+
+    <Button
+        android:id="@+id/bt_foreach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="list输出"/>
+
+    <Button
+        android:id="@+id/bt_array_sqr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="数组平方"
+        app:layout_constraintLeft_toRightOf="@+id/bt_foreach"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

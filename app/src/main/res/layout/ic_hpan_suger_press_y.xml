@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_suger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_15"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:src="@mipmap/add_icon" />
+
+    <TextView
+        android:id="@+id/tv_check_suger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_suger"
+        android:layout_marginLeft="@dimen/dimen_14"
+        android:layout_toRightOf="@+id/iv_suger"
+        android:text="测量血糖"
+        android:textColor="#ff333333"
+        android:textSize="19sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_check_suger"
+        android:layout_alignLeft="@+id/tv_check_suger"
+        android:layout_marginTop="2dp"
+        android:text="血糖值：8.8（餐前）"
+        android:textColor="#ff999999"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_suger"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dimen_15"
+        android:text="07:58:25"
+        android:textColor="#ff999999"
+        android:textSize="16sp" />
+
+</RelativeLayout>

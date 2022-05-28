@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/go_seeting_dev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清理应用DEV缓存"
+        android:textSize="30sp"
+        tools:context=".dagger.dn2.MainActivity3" />
+
+    <Button
+        android:id="@+id/go_seeting_sbx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清理应用SBX缓存"
+        android:textSize="30sp"
+        tools:context=".dagger.dn2.MainActivity3" />
+
+    <Button
+        android:id="@+id/go_seeting_sit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清理应用SIT缓存"
+        android:textSize="30sp"
+        tools:context=".dagger.dn2.MainActivity3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxEms="8"
+        android:maxLines="1"
+        android:text="中234567890"/>
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:ellipsize="end"
+            android:lines="2"
+            android:maxEms="10"
+            android:maxLines="2"
+            android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

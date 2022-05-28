@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_00f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ObservableEmitter" />
+
+        <Button
+            android:id="@+id/bt_01f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dispose()" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_10f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="main" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_40f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_50f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PreparedFlowable" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_60f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flowable60" />
+
+        <Button
+            android:id="@+id/bt_61f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FlowableRequest" />
+    </LinearLayout>
+
+</LinearLayout>

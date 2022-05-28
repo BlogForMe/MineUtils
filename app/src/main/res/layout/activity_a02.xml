@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".webview.WebViewActivity">
+
+
+
+        <TextView
+            android:id="@+id/tv_basic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_marginTop="16dp"
+            android:text="基本资料"
+            android:textColor="@color/text_black_dark"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_basic"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_15"
+            android:drawableRight="@mipmap/ic_launcher"
+            android:drawablePadding="@dimen/dimen_15"
+            android:text="吴任用"
+            android:textColor="@color/text_black_dark"
+            android:textSize="17sp" />
+
+</merge >

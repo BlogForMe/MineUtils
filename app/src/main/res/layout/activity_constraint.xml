@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.constraint.ConstraintLayoutActivity">
+
+    <Button
+        android:id="@+id/bt_00"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button_00"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/bt_01" />
+
+    <Button
+        android:id="@+id/bt_01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button_01"
+        app:layout_constraintLeft_toRightOf="@+id/bt_00"
+        app:layout_constraintRight_toLeftOf="@+id/bt_02" />
+
+    <Button
+        android:id="@+id/bt_02"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button_02"
+        app:layout_constraintLeft_toRightOf="@+id/bt_01"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="50dp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_h2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_00">
+
+
+        <Button
+            android:id="@+id/bt_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button_00"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/bt_11" />
+
+        <Button
+            android:id="@+id/bt_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button_01"
+            app:layout_constraintLeft_toRightOf="@+id/bt_10"
+            app:layout_constraintRight_toLeftOf="@+id/bt_12" />
+
+        <Button
+            android:id="@+id/bt_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button_02"
+            app:layout_constraintLeft_toRightOf="@+id/bt_11"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="100dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_h3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_10">
+
+
+        <Button
+            android:id="@+id/bt_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button_20"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/bt_21" />
+
+        <Button
+            android:id="@+id/bt_21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button_21"
+            app:layout_constraintLeft_toRightOf="@+id/bt_20"
+            app:layout_constraintRight_toLeftOf="@+id/bt_22" />
+
+        <Button
+            android:id="@+id/bt_22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button_22"
+            app:layout_constraintLeft_toRightOf="@+id/bt_21"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="150dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_h4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_20">
+
+        <Button
+            android:id="@+id/bt_30"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Button_30"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/bt_31" />
+
+        <Button
+            android:id="@+id/bt_31"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Button_31"
+            app:layout_constraintLeft_toRightOf="@+id/bt_30"
+            app:layout_constraintRight_toLeftOf="@+id/bt_32" />
+
+        <Button
+            android:id="@+id/bt_32"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Button_32"
+            app:layout_constraintLeft_toRightOf="@+id/bt_31"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gp_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="cl_h4,cl_h2" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gp_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="bt_00,bt_01" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_b1b2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/bt_b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button_b1"
+            app:layout_constraintLeft_toRightOf="@+id/bt_31"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/bt_b2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:text="Button_b2"
+            app:layout_constraintLeft_toRightOf="@+id/bt_31"
+            app:layout_constraintRight_toRightOf="parent" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

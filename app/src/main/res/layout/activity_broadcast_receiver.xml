@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".component.broadcastservice.BroadcastReceiverActivity">
+
+    <Button
+        android:id="@+id/bt_broadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送普通广播" />
+
+  <Button
+        android:id="@+id/bt_go_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到广播2" />
+
+
+    <Button
+        android:id="@+id/bt_order_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送有序广播" />
+
+    <Button
+        android:id="@+id/bt_local_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="应用内广播" />
+</LinearLayout>

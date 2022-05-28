@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ndk.JYSoActivity">
+
+
+    <Button
+        android:id="@+id/bt_wf_allow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_40"
+        android:layout_marginTop="@dimen/dimen_40"
+        android:text="允许加网" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_wf_allow"
+        android:layout_alignLeft="@+id/bt_wf_allow"
+        android:layout_marginTop="@dimen/dimen_40">
+
+        <Spinner
+            android:id="@+id/sp_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/port_adapter"
+            android:padding="@dimen/dimen_30" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="波特率\n 115200"
+            android:textSize="@dimen/text_size_22" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_40"
+            android:gravity="center_horizontal"
+            android:text="设备类型\n 114"
+            android:textSize="@dimen/text_size_22" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_toRightOf="@+id/ll_operation"
+        android:gravity="center"
+        android:text="测量数据显示"
+        android:textSize="@dimen/text_size_22" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_operation"
+        android:layout_marginLeft="@dimen/dimen_40">
+
+        <Button
+            android:id="@+id/bt_stop_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_22"
+            android:text="禁止入网" />
+
+        <Button
+            android:id="@+id/bt_reset_mac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_40"
+            android:layout_marginTop="@dimen/dimen_22"
+            android:onClick="ReadString"
+            android:text="复位网关" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="initSo"
+            android:text="initSo" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_22"
+            android:onClick="openChannel"
+            android:text="openChannel" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_22"
+            android:onClick="CloseChannel"
+            android:text="CloseChannel" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_22"
+            android:onClick="WriteString"
+            android:text="WriteString" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_22"
+            android:onClick="ReadString"
+            android:text="ReadString" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

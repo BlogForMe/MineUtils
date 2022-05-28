@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".anim.textview.TextViewActivity">
+
+    <ImageView
+        android:id="@+id/iv_gif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:text="开始闪烁" />
+
+
+    <Button
+        android:id="@+id/bt_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止闪烁" />
+
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:text="下一步" />
+
+    <TextView
+        android:id="@+id/tv_commit"
+        style="@style/BtnNext"
+        android:layout_below="@+id/blood_layout_4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_40"
+        android:text="提交结果" />
+
+
+    <com.comm.util.anim.textview.MyView2
+        android:id="@+id/my_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下一步" />
+
+   <com.comm.util.anim.textview.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="25dp"
+        android:text="你好"
+        android:textSize="25dp" />
+
+
+
+</LinearLayout>

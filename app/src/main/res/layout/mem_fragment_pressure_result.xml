@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="偏低"
+            android:textColor="#ff999999"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="正常"
+            android:textColor="#ff999999"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="重度"
+            android:textColor="#ff999999"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_high"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_title"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_15">
+
+        <TextView
+            android:id="@+id/tv_title_high_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:text="高压"
+            android:textColor="#ff999999"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/iv_press_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_title_high_1"
+            android:scaleType="fitXY"
+            android:src="@mipmap/mem_pressure_result_line_high" />
+
+        <TextView
+            android:id="@+id/tv_systolic_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_press_line_1"
+            android:layout_alignLeft="@+id/iv_press_line_1"
+            android:layout_marginTop="25dp"
+            android:drawableTop="@mipmap/mem_pressure_result_triangle"
+            android:text="84 mmHg" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_low"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_high"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_15">
+
+        <TextView
+            android:id="@+id/tv_title_high_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:text="低压"
+            android:textColor="#ff999999"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/iv_press_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_title_high_2"
+            android:scaleType="fitXY"
+            android:src="@mipmap/mem_pressure_result_line_low" />
+
+        <TextView
+            android:id="@+id/tv_diastolic_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_press_line_2"
+            android:layout_alignLeft="@+id/iv_press_line_2"
+            android:layout_marginTop="25dp"
+            android:drawableTop="@mipmap/mem_pressure_result_triangle"
+            android:text="84 mmHg" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_pulse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_low"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginRight="@dimen/dimen_15">
+
+        <TextView
+            android:id="@+id/tv_title_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:text="脉搏"
+            android:textColor="#ff999999"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/iv_press_line_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_title_high"
+            android:scaleType="fitXY"
+            android:src="@mipmap/mem_pressure_result_line_pulse" />
+
+        <TextView
+            android:id="@+id/tv_mean_ap_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_press_line_3"
+            android:layout_alignLeft="@+id/iv_press_line_3"
+            android:layout_marginTop="25dp"
+            android:drawableTop="@mipmap/mem_pressure_result_triangle"
+            android:text="84 mmHg" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_pulse"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textColor="#ff00c0c8"
+        android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_current_time">
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收缩压"
+                android:textColor="#ff0dc4cb"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_systolic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title1"
+                android:layout_marginTop="2dp"
+                android:textColor="#ff666666"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_systolic"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_toRightOf="@+id/tv_systolic"
+                android:text="mmHg"
+                android:textColor="#ff999999"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收缩压"
+                android:textColor="#ff0dc4cb"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_diastolic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title2"
+                android:layout_marginTop="2dp"
+                android:textColor="#ffed7f31"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_diastolic"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_toRightOf="@+id/tv_diastolic"
+                android:text="mmHg"
+                android:textColor="#ffed7f31"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收缩压"
+                android:textColor="#ff0dc4cb"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_mean_ap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title3"
+                android:layout_marginTop="2dp"
+                android:textColor="#ff666666"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_mean_ap"
+                android:layout_marginLeft="@dimen/dimen_15"
+                android:layout_toRightOf="@+id/tv_mean_ap"
+                android:text="mmHg"
+                android:textColor="#ff666666"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

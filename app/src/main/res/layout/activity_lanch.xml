@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.comm.util.component.launchmode.LaunchActivity">
+
+    <Button
+        android:id="@+id/bt_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity跳回"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="29dp" />
+  <Button
+        android:id="@+id/bt_hint_intent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity隐士启动"
+       />
+
+    <fragment
+        android:id="@+id/fragment_bottom"
+        class="com.comm.util.component.launchmode.LaunchFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp" />
+
+</LinearLayout>

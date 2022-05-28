@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.comm.util.dialog.DialogActivity">
+
+    <Button
+        android:id="@+id/bt_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btDialog"
+        android:text="Dialog" />
+
+    <Button
+        android:id="@+id/btConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btDialog"
+        android:text="确定" />
+    <Button
+        android:id="@+id/btRecycleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btDialog"
+        android:text="HRecycleView" />
+
+    <Button
+        android:id="@+id/bt_bottom_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btBottomDialog"
+        android:text="BottomDialog"
+        app:layout_constraintTop_toBottomOf="@+id/bt_dialog" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/bt_bottom_dialog">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@mipmap/item_bonus_top" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:elevation="4dp">
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_prescription_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="17dp"
+        android:text="处方笺:"
+        android:textColor="#4E6550"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginRight="25dp"
+         />
+
+    <View
+        android:id="@+id/view_line_01"
+        style="@style/LineBoxHorizontal"
+        android:layout_below="@+id/tv_prescription_title"
+        android:layout_marginTop="@dimen/dimen_20" />
+
+    <TextView
+        android:id="@+id/tv_recipeid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line_01"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="@dimen/dimen_13"
+        android:text="编号"
+        android:textColor="#ff999999"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/tv_recipe_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line_01"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dimen_13"
+        android:layout_marginRight="34dp"
+        android:text="2018.08.18"
+        android:textColor="@color/text_black_dark"
+        android:textSize="19sp" />
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_recipeid"
+        android:layout_alignLeft="@+id/tv_recipeid"
+        android:layout_marginTop="15dp"
+        android:text="姓 名:"
+        android:textColor="#ff4e6550"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/tv_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_name"
+        android:layout_centerHorizontal="true"
+        android:text="性 别："
+        android:textColor="#ff4e6550"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/tv_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:text="年 龄："
+        android:textColor="#ff4e6550"
+        android:textSize="19sp" />
+
+    <View
+        android:id="@+id/view_line_03"
+        style="@style/LineBoxHorizontal"
+
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="@dimen/dimen_13" />
+
+    <TextView
+        android:id="@+id/tv_symptom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line_03"
+        android:layout_alignLeft="@+id/tv_name"
+        android:layout_marginTop="@dimen/dimen_13"
+        android:text="诊断："
+        android:textColor="#ff4e6550"
+        android:textSize="19sp" />
+
+    <View
+        android:id="@+id/view_line_04"
+        style="@style/LineBoxHorizontal"
+        android:layout_below="@+id/tv_symptom"
+        android:layout_marginTop="@dimen/dimen_13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line_04"
+        android:layout_alignLeft="@+id/tv_name"
+        android:layout_marginTop="@dimen/dimen_13"
+        android:text="Rp."
+        android:textColor="#ff4e6550"
+        android:textSize="19sp" />
+</RelativeLayout>

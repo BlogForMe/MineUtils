@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.comm.util">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 获取 UUID 用到 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" /> <!-- 悬浮窗的显示 -->
+    <uses-permission android:name="android.permission.BJYSoActivityLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.DisplayCountActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".ui.recycleview.divider.LineElementActivity"
+            android:exported="true"></activity>
+        <activity android:name=".ui.StateBarActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AppManagerActivity">
+
+        </activity>
+        <activity
+            android:name=".dagger.dn2.MainActivity3"
+            android:exported="true" />
+        <activity
+            android:name=".dagger.dn.DaggerUserActivity"
+            android:exported="true" />
+        <activity
+            android:name=".dagger.dn.SecondActivity"
+            android:exported="true" />
+        <activity
+            android:name=".dagger.dn.DaggerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".dagger.dn.DaggerActivity1"
+            android:exported="true" />
+        <activity
+            android:name=".binder.client.ClientActivity"
+            android:exported="true" />
+        <activity android:name=".ui.recycleview.xiangxue.RecycleWriteActivity" />
+        <activity android:name=".openlib.rxretrofit.xiangx.RxImlActivity" />
+        <activity android:name=".openlib.rxretrofit.xiangx.XiangXueActivity" />
+        <activity android:name=".ui.customview.ScrollerActivity" />
+        <activity android:name=".ui.customview.MeasureActivity" />
+        <activity android:name=".thread.ThreadActivity" />
+        <activity android:name=".anim.interpol.InterpolatorActivity" />
+        <activity android:name=".anim.property.ValueAnimActivity" />
+        <activity android:name=".component.broadcastservice.SecondBroadCastActivity" />
+        <activity android:name=".component.service.OtherActivity" />
+        <activity android:name=".component.service.MultipleFirstActivity" />
+        <activity android:name=".framework.dispatch.ScrollListTextActivity" />
+        <activity android:name=".framework.dispatch.ViewPagerListActivity" />
+
+        <service android:name=".component.service.ServiceLifeCycle" />
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <service android:name=".socket.BleDataService" />
+
+        <activity android:name=".socket.MinaTestActivity" />
+        <activity android:name=".ui.tool.BlinkActivity" />
+        <activity android:name=".tool.screen.ScreenCaptureActivity" />
+        <activity android:name=".tool.capture.CaptureImgActivity" />
+        <activity android:name=".tool.camera.VideoActivity" />
+        <activity android:name=".RestartBleActivity" />
+        <activity android:name=".openlib.rxretrofit.renyugang.RenYuGangweixinActivity" />
+        <activity android:name=".ui.DialActivity" />
+        <activity android:name=".ui.CoordinatesActivity" />
+        <activity android:name=".ui.surview.SurfaceViewActivity" />
+        <activity android:name=".ui.ToastUtilActivity" />
+        <activity android:name=".storage.room.RoomActivity" />
+        <activity android:name=".ndk.ZigTestActivity" />
+        <activity android:name=".component.launchmode.RecerateLifeActivity" />
+        <activity android:name=".framework.dispatch.ScrollConflictActivity" />
+        <activity android:name=".KotlinTypeActivity" />
+        <activity android:name=".ui.customview.ElectLkActivity" />
+        <activity android:name=".ndk.JYSoActivity" />
+        <activity android:name=".audio.TtsActivity" />
+        <activity
+            android:name=".ui.PopupWindowActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".openlib.rxretrofit.renyugang.RxJavaRenActivity" />
+        <activity android:name=".dialog.DialogActivity" />
+        <activity android:name=".storage.StorageActivity" />
+        <activity android:name=".component.broadcastservice.BroadcastReceiverActivity" />
+        <activity android:name=".ui.recycleview.ListViewActivity" />
+        <activity android:name=".anim.AnimUseActivity" />
+        <activity android:name=".memory.MemoryMonitorActivity" />
+        <activity android:name=".dagger.DaggerPresenterActivity" />
+        <activity android:name=".dagger.demo1.A01SimpleActivity" />
+        <activity android:name=".component.activityresult.FirstResultActivity" />
+        <activity android:name=".component.launchmode.SerachActivity" />
+        <activity
+            android:name=".component.launchmode.FirstActivity"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.comm.mytask" />
+        <activity android:name=".component.launchmode.SecondActivity" />
+        <activity android:name=".component.launchmode.ThirdActivity" />
+        <activity android:name=".component.fragment.life.LifeActivity" />
+        <activity android:name=".openlib.glide.GlideActivity" />
+        <activity android:name=".ui.viewstub.ViewStubActivity" />
+        <activity android:name=".ui.LinerLayoutActivity" />
+        <activity android:name=".component.launchmode.LaunchActivity" />
+        <activity android:name=".permission.ContactActivity" />
+        <activity android:name=".ui.customview.TextSpanActivity" />
+        <activity android:name=".memory.RxLifecycleLeakActivity" />
+        <activity android:name=".openlib.TimberActivity.TimberActivity" />
+        <activity android:name=".openlib.rxretrofit.lambda.LambdaActivity" />
+        <activity android:name=".openlib.eventbus.EventBusActivity" />
+        <activity android:name=".openlib.eventbus.GoalEventActivity" />
+        <activity android:name=".component.service.CheckServiceActivity" />
+        <activity android:name=".dialog.dw.ProgressBarActivity" />
+        <activity android:name=".ui.tab.TabLayoutActivity" />
+        <activity android:name=".ui.tab.TabBottomActivity" />
+        <activity android:name=".openlib.rxretrofit.retrofit.RetrofitActivity" />
+        <activity android:name=".anim.gesture.GestureDetectorActivity" />
+        <activity android:name=".anim.slide.SlideFirstActivity" />
+        <activity
+            android:name=".anim.slide.SlideSecondActivity"
+            android:theme="@style/SlideTheme" />
+        <activity android:name=".anim.textview.TextViewActivity" />
+        <activity android:name=".ui.recycleview.divider.DividerDecorationActivity"></activity>
+        <activity android:name=".audio.AudioActivity" />
+        <activity android:name=".ui.constraint.ConstraintLayoutActivity" />
+        <activity android:name=".component.fragment.stack.StackActivity" />
+        <activity android:name=".webview.WebViewActivity" />
+        <activity android:name=".anim.move.MoveActivity" />
+        <activity android:name=".ui.progress.ProgressDialogActivity" />
+        <activity android:name=".dialog.window.WindowManagerActivity" />
+        <activity android:name=".ui.ListViewActivity" />
+        <activity android:name=".socket.mqtt.MqttActivity" />
+        <activity android:name=".permission.PermissionActivity" />
+        <activity
+            android:name=".BeaconActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".ui.recycleview.RecycleViewScrollActivity" />
+        <activity android:name=".ui.customview.CustomViewActivity" />
+        <activity android:name=".gcssloop.touchevent.TouchEventActivity" />
+
+        <receiver android:name=".component.broadcastservice.UpdateBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.UpdateBroadcastReceiver" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".socket.MinaActivity" />
+        <activity android:name=".component.activityresult.SecondResultActivity" />
+
+        <service android:name=".component.service.ContentService" />
+
+        <receiver android:name=".component.broadcastservice.FirstOrderBroadCast">
+            <intent-filter android:priority="3000">
+                <action android:name="com.broadcast.android" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".component.broadcastservice.SecondOrderBroadCast">
+            <intent-filter android:priority="2000">
+                <action android:name="com.broadcast.android" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".component.broadcastservice.ThirdOrderBroadCast">
+            <intent-filter android:priority="1000">
+                <action android:name="com.broadcast.android" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

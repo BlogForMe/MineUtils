@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.StateBarActivity">
+
+   <!-- <include
+        android:id="@+id/ic_top"
+        layout="@layout/ic_toolbar" />-->
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="showSomething"
+       android:textSize="40sp"/>
+
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:onClick="change_statebar_element_color"
+       android:text="change_STATEBAR_ELEMENT_color"/>
+
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:onClick="change_statebar_color"
+       android:text="change_STATEBAR_color"/>
+
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="WindowInsetsCompat"
+       />
+
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:onClick="hide_state_bar"
+       android:text="hide_state_bar"/>
+
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:onClick="AppearanceLightStatusBars"
+       android:text="状态栏文字颜色修改"/>
+
+
+</LinearLayout>

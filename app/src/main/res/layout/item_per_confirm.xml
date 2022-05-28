@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_pa_ma"
+        android:layout_width="155dp"
+        android:layout_height="188dp"
+        android:layout_marginLeft="@dimen/dimen_30"
+        android:layout_marginTop="90dp"
+        android:drawablePadding="@dimen/dimen_30"
+        android:gravity="center_horizontal"
+        android:src="@mipmap/hub_ic_guide_grandma_show"
+        android:textColor="#666666"
+        android:textSize="37sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+    <TextView
+        android:id="@+id/tv_t_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:text="年龄："
+        android:textColor="#ff999999"
+        android:textSize="37sp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_pa_ma"
+        app:layout_constraintTop_toTopOf="@+id/iv_pa_ma"
+        />
+
+    <TextView
+        android:id="@+id/tv_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textColor="#666666"
+        android:textSize="37sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_t_age"
+        app:layout_constraintLeft_toRightOf="@+id/tv_t_age" />
+
+    <TextView
+        android:id="@+id/tv_t_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_21"
+        android:text="手机："
+        android:textColor="#ff999999"
+        android:textSize="37sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_t_age"
+        app:layout_constraintLeft_toRightOf="@+id/iv_pa_ma"
+        app:layout_constraintTop_toBottomOf="@+id/tv_t_age"
+        />
+
+    <TextView
+        android:id="@+id/tv_phone_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#666666"
+        android:textSize="37sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_t_phone"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_age" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

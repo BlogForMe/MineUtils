@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".openlib.eventbus.EventBusActivity">
+
+    <Button
+        android:id="@+id/bt_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event发送" />
+
+    <Button
+        android:id="@+id/bt_event_recieve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:text="消息接收"
+        app:layout_constraintLeft_toRightOf="@+id/bt_send" />
+
+    <Switch
+        android:id="@+id/st_ward_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:textColor="#ff999999"
+        android:textSize="23sp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/bt_AppInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="应用信息"
+        app:layout_constraintTop_toBottomOf="@+id/bt_event_recieve"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

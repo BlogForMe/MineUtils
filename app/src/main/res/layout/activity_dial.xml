@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.comm.util.ui.DialActivity">
+
+    <com.comm.util.view.DialKgView
+        android:id="@+id/dkgview"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"/>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <com.comm.util.view.BodyDataView-->
+<!--            android:id="@+id/body_data_view"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:body_value_title="脂肪率"-->
+<!--            app:body_value_txt="48"-->
+<!--            app:img_body_check="@mipmap/img_1"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/bt_value"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="设置体症值"/>-->
+
+
+<!--    </LinearLayout>-->
+
+
+    <Button
+        android:id="@+id/bt_setkg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

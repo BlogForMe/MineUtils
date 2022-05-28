@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff0000</color>
+    <color name="colorPrimaryDark">#3399FF</color>
+    <color name="colorAccent">#31bda3</color>
+    <!-- common base color-->
+    <color name="white">#ffffff</color>
+    <color name="gray">#333333</color>
+    <color name="red">#ff0000</color>
+    <color name="blue">#3399FF</color>
+    <color name="orange">#FFA500</color>
+
+    <!-- text color-->
+    <color name="text_light">#656565</color>
+    <color name="text_light_hour">#aeaeae</color>
+
+
+    <!--  common color-->
+
+    <color name="text_black">#333333</color>
+    <color name="text_black_mid">#666666</color>
+    <color name="text_black_light">#999999</color>
+    <color name="text_red">#e73118</color>
+    <color name="text_yellow">#ff643e</color>
+
+    <color name="bg_color">#f2f2f2</color>
+    <color name="line_color">#dddddddd</color>
+    <color name="text_black_dark">#333333</color>
+
+
+    <color name="sms_gray">#7b7b7b</color>
+    <color name="sms_blue">#529efb</color>
+    <color name="bt_yellow">#ff643e</color>
+
+    <color name="blue_light">#529efb</color>
+
+    <color name="bg_whight">#FAFAFA</color>
+
+    <color name="black">#FAC742</color>
+    <color name="pink">#ffffcbd7</color>
+    <color name="green">#ffbae4b6</color>
+
+
+</resources>

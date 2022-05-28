@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dimen_20">
+
+    <include
+        android:id="@+id/ic_top"
+        layout="@layout/item_pharmacy" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/iv_stamp_img"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@mipmap/header_background"/>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_h03"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ic_top"
+        android:layout_marginTop="80dp" />
+
+
+    <TextView
+        android:id="@+id/tv_operation_doc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_h03"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="@dimen/dimen_13"
+        android:text="开方医生:"
+        android:textColor="#ff4e6550"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_operation_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_operation_doc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="26dp"
+        android:textColor="#ff4e6550"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_exam_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_operation_doc"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="36dp"
+        android:textColor="#ff4e6550"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

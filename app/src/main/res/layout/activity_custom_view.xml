@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.customview.CustomViewActivity">
+
+
+    <com.comm.util.ui.customview.view.LinearRoomConfig
+        android:id="@+id/ll_ww"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- 自定义TextView-->
+    <com.comm.util.ui.customview.view.LinearTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+
+
+    <com.comm.util.ui.customview.gcssloop.PieView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone" />
+    <com.comm.util.ui.customview.view.Electrocardiogram
+        android:id="@+id/electrocardiogram"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:background="#000"
+        />
+
+
+</LinearLayout>

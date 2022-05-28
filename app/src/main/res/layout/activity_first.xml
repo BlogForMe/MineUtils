@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.comm.util.component.launchmode.FirstActivity">
+
+
+    <Button
+        android:id="@+id/bt_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="搜索" />
+
+    <Button
+        android:id="@+id/bt_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="弹出对话框"/>
+
+        <Button
+            android:id="@+id/bt_launch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳转第二个Activity" />
+    <!--
+         <EditText
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:hint="请输入"
+             android:maxLength="10" />
+
+     <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id="@+id/fab_button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" />
+ -->
+
+</LinearLayout>

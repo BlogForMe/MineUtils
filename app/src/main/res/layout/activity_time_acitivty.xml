@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.comm.util.test.TimeAcitivty">
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:format="时长 : %s"
+        android:gravity="center"
+        android:textColor="#ff999999"
+        android:textSize="@dimen/text_size_28" />
+
+    <Button
+        android:id="@+id/chronometer_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start" />
+
+       <Button
+        android:id="@+id/chronometer_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="stop" />
+
+
+    <Button
+        android:id="@+id/chronometer_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="reset" />
+
+
+    <!--
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#959393" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="00:00:00" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startClick"
+            android:text="开始" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="stopClick1"
+            android:text="停止" />
+    -->
+
+    <TextView
+        android:id="@+id/tv_countdowntimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示时间" />
+
+    <Button
+        android:id="@+id/tv_long_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="tvLongTime"
+        android:text="时间长度选择" />
+
+
+    <Button
+        android:id="@+id/tv_crash_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crash 重启" />
+
+
+</LinearLayout>
