@@ -27,15 +27,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".ui.DisplayCountActivity"
-            android:exported="true">
+        <activity android:name=".ui.DisplayCountActivity">
 
         </activity>
         <activity
             android:name=".ui.recycleview.divider.LineElementActivity"
             android:exported="true"></activity>
-        <activity android:name=".ui.StateBarActivity">
+        <activity
+            android:name=".ui.StateBarActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -162,7 +162,9 @@
         <activity android:name=".ui.customview.CustomViewActivity" />
         <activity android:name=".gcssloop.touchevent.TouchEventActivity" />
 
-        <receiver android:name=".component.broadcastservice.UpdateBroadcastReceiver">
+        <receiver
+            android:name=".component.broadcastservice.UpdateBroadcastReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.UpdateBroadcastReceiver" />
             </intent-filter>
@@ -173,17 +175,23 @@
 
         <service android:name=".component.service.ContentService" />
 
-        <receiver android:name=".component.broadcastservice.FirstOrderBroadCast">
+        <receiver
+            android:name=".component.broadcastservice.FirstOrderBroadCast"
+            android:exported="false">
             <intent-filter android:priority="3000">
                 <action android:name="com.broadcast.android" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".component.broadcastservice.SecondOrderBroadCast">
+        <receiver
+            android:name=".component.broadcastservice.SecondOrderBroadCast"
+            android:exported="false">
             <intent-filter android:priority="2000">
                 <action android:name="com.broadcast.android" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".component.broadcastservice.ThirdOrderBroadCast">
+        <receiver
+            android:name=".component.broadcastservice.ThirdOrderBroadCast"
+            android:exported="false">
             <intent-filter android:priority="1000">
                 <action android:name="com.broadcast.android" />
             </intent-filter>
