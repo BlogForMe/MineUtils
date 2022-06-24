@@ -9,7 +9,7 @@ import com.comm.util.MyApplication;
 import com.comm.util.R;
 import com.comm.util.dagger.dn.di.ApiService;
 
-public class SecondActivity extends AppCompatActivity {
+public class DaggerSecondActivity extends AppCompatActivity {
     String TAG = "SecondActivity";
 
     @Inject

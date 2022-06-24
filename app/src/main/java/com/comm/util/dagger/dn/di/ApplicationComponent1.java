@@ -13,7 +13,7 @@ package com.comm.util.dagger.dn.di;
 import javax.inject.Singleton;
 
 import com.comm.util.dagger.dn.DaggerActivity1;
-import com.comm.util.dagger.dn.SecondActivity;
+import com.comm.util.dagger.dn.DaggerSecondActivity;
 import dagger.Component;
 
 // 2. 当作IOC容器,把对象注入到目标类中
@@ -23,5 +23,6 @@ public interface ApplicationComponent1 {
 
     void inject(DaggerActivity1 daggerActivity);//指定目标类 //dependencies = {ApplicationComponent1.class}
 
-    void inject(SecondActivity secondActivity);   //dependencies = {ApplicationComponent1.class} 所以这里注释掉
+    void inject(
+        DaggerSecondActivity secondActivity);   //dependencies = {ApplicationComponent1.class} 所以这里注释掉
 }

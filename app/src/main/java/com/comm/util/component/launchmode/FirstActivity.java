@@ -47,72 +47,74 @@ public class FirstActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        super.initView();
+
+        findViewById(R.id.bt_dialog).setOnClickListener(v -> {
+            new AlertDialog.Builder(this)
+                .setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).create().show();
+        });
 
         findViewById(R.id.bt_launch).setOnClickListener(v -> {
             //                Intent intent = new Intent(FirstActivity.this, SerachActivity.class);
             Intent intent = new Intent(this, SecondActivity.class);
-//            startActivityForResult(intent, REQUEST_TAG_SEARCH_ROOM);
-//            recreate();
+            //            startActivityForResult(intent, REQUEST_TAG_SEARCH_ROOM);
+            //            recreate();
+            intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
             startActivity(intent);
 
         });
 
-        findViewById(R.id.bt_dialog).setOnClickListener(v -> {
-            new AlertDialog.Builder(this)
-                    .setPositiveButton("确认", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
+        //        FloatingActionButton fabButton =findViewById(R.id.fab_button);
+        //        findViewById(R.id.fab_button).setOnClickListener(v->{
 
-                        }
-                    })
-                    .setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
+        //            fabButton.show();
+        //            fabButton.hide();
 
-                        }
-                    }).create().show();
-        });
+        //
+        //                /**
+        //                 * 实现双击方法
+        //                 * src 拷贝的源数组
+        //                 * srcPos 从源数组的那个位置开始拷贝.
+        //                 * dst 目标数组
+        //                 * dstPos 从目标数组的那个位子开始写数据
+        //                 * length 拷贝的元素的个数
+        //                 */
+        //                System.arraycopy(mHits, 1, mHits, 0, mHits.length - 1);
+        //                //实现左移，然后最后一个位置更新距离开机的时间，如果最后一个时间和最开始时间小于DURATION，即连续5次点击
+        //                mHits[mHits.length - 1] = SystemClock.uptimeMillis();
+        //                if (mHits[0] >= (SystemClock.uptimeMillis() - DURATION)) {
+        //                    String tips = "您已在[" + DURATION + "]ms内连续点击【" + mHits.length +
+        //                    "】次了！！！";
+        //                    Toast.makeText(FirstActivity.this, tips, Toast.LENGTH_SHORT).show();
+        //                }
+        //            String serialNum = android.os.Build.SERIAL;
+        //            ToastUtils.showShortToast("serialNum " + serialNum);
 
+        //            int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+        //            Timber.i("hour  "+ hour);
+        //            SimpleDateFormat sdf = new SimpleDateFormat(HHCmm);
+        //            Date startD = null;
+        //            try {
+        //                startD = sdf.parse("11");
+        //                Date endD = sdf.parse("5");
+        //                Timber.i( "startD    " + startD.getTime() + "    endD " + endD.getTime());
+        //            } catch (ParseException e) {
+        //                e.printStackTrace();
+        //            }
 
-//        FloatingActionButton fabButton =findViewById(R.id.fab_button);
-//        findViewById(R.id.fab_button).setOnClickListener(v->{
-
-//            fabButton.show();
-//            fabButton.hide();
-
-//
-//                /**
-//                 * 实现双击方法
-//                 * src 拷贝的源数组
-//                 * srcPos 从源数组的那个位置开始拷贝.
-//                 * dst 目标数组
-//                 * dstPos 从目标数组的那个位子开始写数据
-//                 * length 拷贝的元素的个数
-//                 */
-//                System.arraycopy(mHits, 1, mHits, 0, mHits.length - 1);
-//                //实现左移，然后最后一个位置更新距离开机的时间，如果最后一个时间和最开始时间小于DURATION，即连续5次点击
-//                mHits[mHits.length - 1] = SystemClock.uptimeMillis();
-//                if (mHits[0] >= (SystemClock.uptimeMillis() - DURATION)) {
-//                    String tips = "您已在[" + DURATION + "]ms内连续点击【" + mHits.length + "】次了！！！";
-//                    Toast.makeText(FirstActivity.this, tips, Toast.LENGTH_SHORT).show();
-//                }
-//            String serialNum = android.os.Build.SERIAL;
-//            ToastUtils.showShortToast("serialNum " + serialNum);
-
-//            int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-//            Timber.i("hour  "+ hour);
-//            SimpleDateFormat sdf = new SimpleDateFormat(HHCmm);
-//            Date startD = null;
-//            try {
-//                startD = sdf.parse("11");
-//                Date endD = sdf.parse("5");
-//                Timber.i( "startD    " + startD.getTime() + "    endD " + endD.getTime());
-//            } catch (ParseException e) {
-//                e.printStackTrace();
-//            }
-
-//        });
+        //        });
     }
 
     @Override
@@ -125,13 +127,11 @@ public class FirstActivity extends BaseActivity {
         Timber.d("onNewIntent  " + data3);
     }
 
-
-//    @OnClick(R.id.bt_launch)
-//    public void btLaunch() {
-//        Intent intent = new Intent(this, LaunchActivity.class);
-//        startActivity(intent);
-//    }
-
+    //    @OnClick(R.id.bt_launch)
+    //    public void btLaunch() {
+    //        Intent intent = new Intent(this, LaunchActivity.class);
+    //        startActivity(intent);
+    //    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

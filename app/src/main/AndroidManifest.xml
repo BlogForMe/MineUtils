@@ -36,11 +36,7 @@
         <activity
             android:name=".ui.StateBarActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".AppManagerActivity">
 
@@ -52,7 +48,7 @@
             android:name=".dagger.dn.DaggerUserActivity"
             android:exported="true" />
         <activity
-            android:name=".dagger.dn.SecondActivity"
+            android:name=".dagger.dn.DaggerSecondActivity"
             android:exported="true" />
         <activity
             android:name=".dagger.dn.DaggerActivity"
@@ -117,8 +113,13 @@
         <activity android:name=".component.launchmode.SerachActivity" />
         <activity
             android:name=".component.launchmode.FirstActivity"
-            android:launchMode="singleTask"
-            android:taskAffinity="com.comm.mytask" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".component.launchmode.SecondActivity" />
         <activity android:name=".component.launchmode.ThirdActivity" />
         <activity android:name=".component.fragment.life.LifeActivity" />

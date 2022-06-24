@@ -47,6 +47,6 @@ public class DaggerActivity1 extends AppCompatActivity {
         Log.i(TAG, "apiService: " +apiService);
         Log.i(TAG, "apiService2: " +apiService2);
 
-        startActivity(new Intent(this,SecondActivity.class));
+        startActivity(new Intent(this, DaggerSecondActivity.class));
     }
 }

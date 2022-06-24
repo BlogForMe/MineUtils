@@ -9,12 +9,12 @@
  */
 package com.comm.util.dagger.dn.di;
 
-import com.comm.util.dagger.dn.SecondActivity;
+import com.comm.util.dagger.dn.DaggerSecondActivity;
 import dagger.Subcomponent;
 
 @Subcomponent(modules = StudentModule.class)
 public interface StudentComponent {
-    void inject(SecondActivity secondActivity);
+    void inject(DaggerSecondActivity secondActivity);
 
     @Subcomponent.Factory
     interface Factory{
