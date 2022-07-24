@@ -4,14 +4,12 @@ import android.app.ActivityManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.alibaba.android.arouter.facade.annotation.Route
-import com.comm.util.ARouterManager
 import com.comm.util.R
 import com.comm.util.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_second.*
 import timber.log.Timber
 
-@Route(path = ARouterManager.ACTIVITY_SECOND)
+//@Route(path = ARouterManager.ACTIVITY_SECOND)
 class SecondActivity : BaseActivity() {
 
 
@@ -40,5 +38,9 @@ class SecondActivity : BaseActivity() {
         return if (cmpNameTemp == null) {
             false
         } else cmpNameTemp == activityName
+
     }
+
+
 }
+

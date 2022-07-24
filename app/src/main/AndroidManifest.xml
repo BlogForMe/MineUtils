@@ -120,7 +120,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".component.launchmode.SecondActivity" />
+        <activity
+            android:name=".component.launchmode.SecondActivity"
+            android:launchMode="singleTop" />
+
         <activity android:name=".component.launchmode.ThirdActivity" />
         <activity android:name=".component.fragment.life.LifeActivity" />
         <activity android:name=".openlib.glide.GlideActivity" />

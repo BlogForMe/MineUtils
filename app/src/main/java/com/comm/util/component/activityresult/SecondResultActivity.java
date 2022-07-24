@@ -2,8 +2,6 @@ package com.comm.util.component.activityresult;
 
 import java.util.List;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
-
 import android.app.ActivityManager;
 import android.content.Intent;
 import android.view.View;
@@ -11,9 +9,8 @@ import com.comm.util.R;
 import com.comm.util.base.BaseActivity;
 import timber.log.Timber;
 
-import static com.comm.util.ARouterManager.ACTIVITY_SECOND;
 
-@Route(path = ACTIVITY_SECOND)
+//@Route(path = ACTIVITY_SECOND)
 public class SecondResultActivity extends BaseActivity {
 
     public static String sData = "data";
