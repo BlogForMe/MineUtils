@@ -2,7 +2,7 @@ package com.comm.util.resume;
 
 import android.util.ArrayMap;
 import android.util.SparseArray;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.runner.AndroidJUnit4;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -27,7 +27,6 @@ public class HashMapTest {
         integerSparseArray.put(1, 1);
         integerSparseArray.put(8, 5);
 
-        Integer
 
     }
 }
