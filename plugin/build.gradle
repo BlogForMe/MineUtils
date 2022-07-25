@@ -1,0 +1,16 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+//https://www.bilibili.com/video/BV1dp4y1e7W4?p=2
+
+dependencies {
+    implementation fileTree(dir:'libs', includes: ['*.jar'])
+    implementation gradleApi()
+}
