@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'xxxx'
 
 
 kapt {
@@ -10,10 +11,10 @@ kapt {
     }
 }
 
-//jiagu{
-//    username 'jon'
-//    password '123456'
-//}
+jiagu{
+    userName 'jon'
+    password '123456'
+}
 
 android {
     compileSdkVersion 32

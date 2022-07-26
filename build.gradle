@@ -6,12 +6,12 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-
+        mavenLocal()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.2'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10' // add plugin
-
+        classpath 'com.enjoy:jiagu:1.0'
     }
 }
 
