@@ -8,9 +8,27 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_7
 }
 
+
+
+
 //https://www.bilibili.com/video/BV1dp4y1e7W4?p=2
 
 dependencies {
     implementation fileTree(dir:'libs', includes: ['*.jar'])
     implementation gradleApi()
+    implementation 'com.android.tools.build:gradle:4.0.1'// 因为要在Android apk基础上做的操作，所以要依赖Android插件
+}
+
+
+apply plugin:'maven-publish'
+
+publishing{
+    publications{
+        JiaguPlugin(MavenPublication){
+            from components.kotlin
+            groupId 'com.great'
+            artifactId 'jiagu'
+            version '1.0'
+        }
+    }
 }

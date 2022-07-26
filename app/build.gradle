@@ -1,11 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-
-// at the end of the build.gradle file
-//apply plugin: 'com.google.gms.google-services'
 
 
 kapt {
@@ -13,6 +9,11 @@ kapt {
         arg("AROUTER_MODULE_NAME", project.getName())
     }
 }
+
+//jiagu{
+//    username 'jon'
+//    password '123456'
+//}
 
 android {
     compileSdkVersion 32
@@ -22,7 +23,7 @@ android {
     }
     defaultConfig {
         applicationId "com.comm.util"
-        minSdkVersion 21  //融云已关闭
+        minSdkVersion 21
         targetSdkVersion 32
         versionCode 1
         versionName "1.0"
@@ -61,83 +62,47 @@ android {
 
 dependencies {
     androidTestImplementation 'androidx.test:core:' + rootProject.coreVersion
-    testImplementation 'androidx.test.ext:junit:1.1.2-alpha01'
-    androidTestImplementation 'androidx.test:runner:1.1.2-alpha01'
+    androidTestImplementation 'androidx.test:runner:1.5.0-alpha04'
     androidTestImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion
     androidTestImplementation 'com.google.truth:truth:' + rootProject.truthVersion
     androidTestImplementation 'org.robolectric:annotations:' + rootProject.robolectricVersion
+    androidTestImplementation "android.arch.core:core-testing:2.2.0"
 
 
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.android.material:material:1.1.0'
-
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-
-
-    //mock
-    // Required -- JUnit 4 framework
-    testImplementation 'junit:junit:4.12'
-    // Optional -- Robolectric environment
-    testImplementation 'androidx.test:core:1.0.0'
+    testImplementation 'androidx.test.ext:junit:1.1.4-alpha07'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'androidx.test:core:1.4.0'
 
     implementation fileTree(include: ['*.so', '*.jar'], dir: 'libs')
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
-    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout"
-    implementation 'com.jakewharton.timber:timber:4.6.0'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 
 
-    // Because RxAndroid releases are few and far between, it is recommended you also
-    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
     implementation 'com.jakewharton:butterknife:10.1.0'
     kapt 'com.jakewharton:butterknife-compiler:10.1.0'
 
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
     kapt 'com.github.bumptech.glide:compiler:4.9.0'
     implementation 'org.greenrobot:eventbus:3.1.1'
 
-    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
     implementation files('libs/slf4j-android-1.7.25.jar')
-//    implementation 'org.slf4j:slf4j-api:1.7.7'
     implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
     api 'androidx.cardview:cardview:1.0.0'
     implementation 'com.alibaba:arouter-api:1.5.2'
     kapt 'com.alibaba:arouter-compiler:1.5.2'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    androidTestImplementation "android.arch.core:core-testing:2.2.0"
     implementation project(path: ':androidUtil')
-    implementation 'androidx.core:core:1.6.0'
+    implementation 'androidx.core:core-ktx:1.8.0'
 
     //Dagger
-    implementation 'com.google.dagger:dagger:2.30.1'
-    kapt 'com.google.dagger:dagger-compiler:2.30.1'
-
-
-//    implementation 'com.tencent.mars:mars-xlog:1.3.0'
-//    implementation 'com.journeyapps:zxing-android-embedded:4.1.0'
-
-//    implementation 'com.android:util:1.1.1'
-
-//    implementation 'io.agora.rtc:voice-sdk:3.0.0'
-
-//    implementation 'org.sufficientlysecure:html-textview:4.0'
-
-
-//    implementation 'com.clevertap.android:clevertap-android-sdk:4.2.0'
-//    implementation 'com.google.firebase:firebase-messaging:20.2.4'
-//    //Mandatory for CleverTap Android SDK v3.6.4 and above add the following -
-//    implementation 'com.android.installreferrer:installreferrer:2.1'
-
-
-    //    implementation 'com.tonystark.android:socket:2.0.4'
-//    implementation 'com.contrarywind:wheelview:4.0.8'
-    //    implementation 'com.aliyun.dpa:oss-android-sdk:+'
-
-
+    implementation 'com.google.dagger:dagger:2.40'
+    kapt 'com.google.dagger:dagger-compiler:2.40'
 
 
 
