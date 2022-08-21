@@ -27,20 +27,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".dagger.xiangxue.DaggerxxActivity"
+            android:exported="true">
+
+        </activity>
         <activity android:name=".ui.DisplayCountActivity">
 
         </activity>
         <activity
             android:name=".ui.recycleview.divider.LineElementActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ui.StateBarActivity"
-            android:exported="true">
-
-        </activity>
-        <activity android:name=".AppManagerActivity">
-
-        </activity>
+            android:exported="true"></activity>
+        <activity android:name=".AppManagerActivity"></activity>
         <activity
             android:name=".dagger.dn2.MainActivity3"
             android:exported="true" />
@@ -114,16 +115,11 @@
         <activity
             android:name=".component.launchmode.FirstActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".component.launchmode.SecondActivity"
             android:launchMode="singleTop" />
-
         <activity android:name=".component.launchmode.ThirdActivity" />
         <activity android:name=".component.fragment.life.LifeActivity" />
         <activity android:name=".openlib.glide.GlideActivity" />
@@ -148,9 +144,17 @@
             android:name=".anim.slide.SlideSecondActivity"
             android:theme="@style/SlideTheme" />
         <activity android:name=".anim.textview.TextViewActivity" />
-        <activity android:name=".ui.recycleview.divider.DividerDecorationActivity"></activity>
+        <activity android:name=".ui.recycleview.divider.DividerDecorationActivity" />
         <activity android:name=".audio.AudioActivity" />
-        <activity android:name=".ui.constraint.ConstraintLayoutActivity" />
+        <activity
+            android:name=".ui.constraint.ConstraintLayoutActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".component.fragment.stack.StackActivity" />
         <activity android:name=".webview.WebViewActivity" />
         <activity android:name=".anim.move.MoveActivity" />

@@ -49,7 +49,9 @@
             android:id="@+id/bt_10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button_00"
+            android:background="@android:color/holo_blue_light"
+            android:text="Inside"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/bt_11" />
 
@@ -57,7 +59,8 @@
             android:id="@+id/bt_11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button_01"
+            android:background="@android:color/holo_blue_light"
+            android:text="Inside"
             app:layout_constraintLeft_toRightOf="@+id/bt_10"
             app:layout_constraintRight_toLeftOf="@+id/bt_12" />
 
@@ -65,7 +68,8 @@
             android:id="@+id/bt_12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button_02"
+            android:background="@android:color/holo_blue_light"
+            android:text="Inside"
             app:layout_constraintLeft_toRightOf="@+id/bt_11"
             app:layout_constraintRight_toRightOf="parent" />
 
@@ -90,7 +94,8 @@
             android:id="@+id/bt_20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button_20"
+            android:background="@android:color/holo_blue_light"
+            android:text="packed"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/bt_21" />
@@ -99,7 +104,8 @@
             android:id="@+id/bt_21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button_21"
+            android:background="@android:color/holo_blue_light"
+            android:text="packed"
             app:layout_constraintLeft_toRightOf="@+id/bt_20"
             app:layout_constraintRight_toLeftOf="@+id/bt_22" />
 
@@ -107,7 +113,8 @@
             android:id="@+id/bt_22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button_22"
+            android:background="@android:color/holo_blue_light"
+            android:text="packed"
             app:layout_constraintLeft_toRightOf="@+id/bt_21"
             app:layout_constraintRight_toRightOf="parent" />
 
@@ -130,26 +137,30 @@
 
         <Button
             android:id="@+id/bt_30"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button_30"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            android:background="@android:color/holo_blue_light"
+            android:text="packedBias"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/bt_31" />
 
         <Button
             android:id="@+id/bt_31"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button_31"
+            android:background="@android:color/holo_blue_light"
+            android:text="packedBias"
             app:layout_constraintLeft_toRightOf="@+id/bt_30"
             app:layout_constraintRight_toLeftOf="@+id/bt_32" />
 
         <Button
             android:id="@+id/bt_32"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button_32"
+            android:background="@android:color/holo_blue_light"
+            android:text="packedBias"
             app:layout_constraintLeft_toRightOf="@+id/bt_31"
             app:layout_constraintRight_toRightOf="parent" />
 
@@ -191,6 +202,86 @@
             app:layout_constraintLeft_toRightOf="@+id/bt_31"
             app:layout_constraintRight_toRightOf="parent" />
     </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_duitnow_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="14dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintTop_toBottomOf="@id/cl_h4">
+
+        <ImageView
+            android:id="@+id/iv_duitnow"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_duit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:text="Reload via  Transfer:"
+            android:textColor="#282828"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_duitnow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_duitnow_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="0124455660"
+            android:textColor="#0064FF"
+            android:textSize="14sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@+id/img_copy"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/tv_duit_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_duit_text" />
+
+        <ImageView
+            android:id="@+id/img_copy"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/meitu111e33"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_duitnow_id"
+            app:layout_constraintEnd_toStartOf="@+id/bt_learn_more"
+            app:layout_constraintStart_toEndOf="@+id/tv_duitnow_id"
+            app:layout_constraintTop_toTopOf="@+id/tv_duitnow_id" />
+
+
+        <TextView
+            android:id="@+id/bt_learn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_light"
+            android:paddingLeft="15dp"
+            android:paddingTop="7dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="7dp"
+            android:text="Learn_More"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_duitnow_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_duitnow_id" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
