@@ -149,11 +149,7 @@
         <activity
             android:name=".ui.constraint.ConstraintLayoutActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".component.fragment.stack.StackActivity" />
         <activity android:name=".webview.WebViewActivity" />
@@ -165,7 +161,13 @@
         <activity android:name=".permission.PermissionActivity" />
         <activity
             android:name=".BeaconActivity"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ui.recycleview.RecycleViewScrollActivity" />
         <activity android:name=".ui.customview.CustomViewActivity" />
         <activity android:name=".gcssloop.touchevent.TouchEventActivity" />

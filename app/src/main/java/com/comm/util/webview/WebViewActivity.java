@@ -63,27 +63,28 @@ public class WebViewActivity extends AppCompatActivity {
         webSettings.setAllowFileAccessFromFileURLs(true);
         //解决图片不显示
         webSettings.setBlockNetworkImage(false);
-        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         }
 
-        String cacheDirPath = getFilesDir().getAbsolutePath() +APP_CACHE_DIR;
-        String cacheDirDB = getCacheDir().getAbsolutePath() +APP_CACHE_DB;
+        String cacheDirPath = getFilesDir().getAbsolutePath() + APP_CACHE_DIR;
+        String cacheDirDB = getCacheDir().getAbsolutePath() + APP_CACHE_DB;
         Timber.i("cacheDirPath  " + cacheDirPath /*+ " cacheDirDB " + cacheDirDB*/);
-        webSettings.setAppCacheEnabled(true);
-//        String databasePath = this.getApplicationContext().getDir("database", Context.MODE_PRIVATE).getPath();
-//        webSettings.setDatabasePath(cacheDirDB);
-        webSettings.setAppCachePath(cacheDirPath);
+        //webSettings.setAppCacheEnabled(true);
+        //        String databasePath = this.getApplicationContext().getDir("database", Context
+        //        .MODE_PRIVATE).getPath();
+        //        webSettings.setDatabasePath(cacheDirDB);
+        //        webSettings.setAppCachePath(cacheDirPath);
 
         mWebView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
 
-//                Timber.i("shouldOverrideUrlLoading " + url);
-//                WebView.HitTestResult hitTestResult = view.getHitTestResult();
-//                //hitTestResult==null解决重定向问题
-//                if (!TextUtils.isEmpty(url) && hitTestResult == null) {
-//                view.loadUrl(url);
+                //                Timber.i("shouldOverrideUrlLoading " + url);
+                //                WebView.HitTestResult hitTestResult = view.getHitTestResult();
+                //                //hitTestResult==null解决重定向问题
+                //                if (!TextUtils.isEmpty(url) && hitTestResult == null) {
+                //                view.loadUrl(url);
 //                    return true;
 //                }
                 return super.shouldOverrideUrlLoading(view, url);
