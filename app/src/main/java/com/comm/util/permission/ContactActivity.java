@@ -30,10 +30,10 @@ public class ContactActivity extends BaseActivity {
     @BindView(R.id.lv_contacts)
     ListView lvContact;
 
-    @Override
-    protected int setLayoutId() {
-        return R.layout.activity_contact;
-    }
+    //@Override
+    //protected int setLayoutId() {
+    //    return R.layout.activity_contact;
+    //}
 
     @Override
     protected void initView() {

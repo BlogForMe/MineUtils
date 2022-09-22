@@ -27,30 +27,31 @@ public class SecondResultActivity extends BaseActivity {
             }
         });
 
-//        findViewById(R.id.bt_islive).setOnClickListener(v -> {
-//            boolean isSendo = DisplayUtils.isMainActivityAlive(SecondActivity.this, "FirstResultActivity");
-//            boolean isSendo = isExsitActivity(this, FirstResultActivity.class);
-//
-//            boolean isSecond = isExsitActivity(this, SecondActivity.class);
-//
-//            boolean isTop = isTopActivity("SecondActivity");
-//            Timber.i("isSendo   " + isSendo + "    isSecond " + isSecond + " isTop " + isTop);
-//            Timber.i("getLocalClassName   " + this.getsim);
-//            startActivity(new Intent(this, ThirdActivity.class));
-//        });
+        //        findViewById(R.id.bt_islive).setOnClickListener(v -> {
+        //            boolean isSendo = DisplayUtils.isMainActivityAlive(SecondActivity.this,
+        //            "FirstResultActivity");
+        //            boolean isSendo = isExsitActivity(this, FirstResultActivity.class);
+        //
+        //            boolean isSecond = isExsitActivity(this, SecondActivity.class);
+        //
+        //            boolean isTop = isTopActivity("SecondActivity");
+        //            Timber.i("isSendo   " + isSendo + "    isSecond " + isSecond + " isTop " +
+        //            isTop);
+        //            Timber.i("getLocalClassName   " + this.getsim);
+        //            startActivity(new Intent(this, ThirdActivity.class));
+        //        });
     }
 
-    @Override
-    protected int setLayoutId() {
-        return R.layout.activity_second;
-    }
-
+    //@Override
+    //protected int setLayoutId() {
+    //    return R.layout.activity_second;
+    //}
 
     /**
      * 检测某Activity是否在当前Task的栈顶
      */
     private boolean isTopActivity(String activityName) {
-        ActivityManager manager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
+        ActivityManager manager = (ActivityManager)getSystemService(ACTIVITY_SERVICE);
         List<ActivityManager.RunningTaskInfo> runningTaskInfos = manager.getRunningTasks(1);
         String cmpNameTemp = null;
         if (runningTaskInfos != null) {

@@ -36,10 +36,10 @@ class TabBottomActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-      /*
-      方案2
-      if (savedInstanceState != null) {
-            *//*获取保存的fragment  没有的话返回null*//*
+        /*
+        方案2
+        if (savedInstanceState != null) {
+              *//*获取保存的fragment  没有的话返回null*//*
             homeFragment = supportFragmentManager.getFragment(savedInstanceState, HOME_FRAGMENT_KEY) as HomeFragment?
             healthFragment = supportFragmentManager.getFragment(savedInstanceState, DASHBOARD_FRAGMENT_KEY) as HealthFragment?
             personFragment = supportFragmentManager.getFragment(savedInstanceState, NOTICE_FRAGMENT_KEY) as PersonFragment?
@@ -89,9 +89,9 @@ class TabBottomActivity : BaseActivity() {
         }
     }
 
-    override fun setLayoutId(): Int {
-        return R.layout.activity_tab_bottom
-    }
+//    override fun setLayoutId(): Int {
+//        return R.layout.activity_tab_bottom
+//    }
 
 
     private fun showFragment(fragment: Fragment?) {
@@ -130,12 +130,12 @@ class TabBottomActivity : BaseActivity() {
     }
 
 
-  /* 
-   
-   
-   override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        *//*fragment不为空时 保存*//*
+    /*
+
+
+     override fun onSaveInstanceState(outState: Bundle) {
+          super.onSaveInstanceState(outState)
+          *//*fragment不为空时 保存*//*
         if (homeFragment != null) {
             supportFragmentManager.putFragment(outState!!, HOME_FRAGMENT_KEY, homeFragment!!)
         }

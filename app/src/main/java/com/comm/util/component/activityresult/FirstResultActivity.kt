@@ -16,9 +16,9 @@ class FirstResultActivity : BaseActivity() {
     }
 
 
-    override fun setLayoutId(): Int {
-        return R.layout.activity_first_result
-    }
+//    override fun setLayoutId(): Int {
+//        return R.layout.activity_first_result
+//    }
 
     val requestCode = 1000
     override fun initView() {

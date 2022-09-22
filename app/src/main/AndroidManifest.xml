@@ -113,12 +113,16 @@
         <activity android:name=".component.activityresult.FirstResultActivity" />
         <activity android:name=".component.launchmode.SerachActivity" />
         <activity
-            android:name=".component.launchmode.FirstActivity"
+            android:name=".component.launchmode.ActivityA"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".component.launchmode.SecondActivity"
+            android:name=".component.launchmode.ActivityB"
             android:launchMode="singleTop" />
         <activity android:name=".component.launchmode.ThirdActivity" />
         <activity android:name=".component.fragment.life.LifeActivity" />
@@ -159,15 +163,6 @@
         <activity android:name=".ui.ListViewActivity" />
         <activity android:name=".socket.mqtt.MqttActivity" />
         <activity android:name=".permission.PermissionActivity" />
-        <activity
-            android:name=".BeaconActivity"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".ui.recycleview.RecycleViewScrollActivity" />
         <activity android:name=".ui.customview.CustomViewActivity" />
         <activity android:name=".gcssloop.touchevent.TouchEventActivity" />

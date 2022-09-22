@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.comm.util.component.launchmode.FirstActivity">
+    tools:context="com.comm.util.component.launchmode.ActivityA">
 
 
     <Button
@@ -17,13 +17,19 @@
         android:id="@+id/bt_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="弹出对话框"/>
+        android:text="弹出对话框" />
 
-        <Button
-            android:id="@+id/bt_launch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="跳转第二个Activity" />
+    <Button
+        android:id="@+id/bt_launch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转第二个Activity" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activiy A"
+        android:textSize="30sp" />
     <!--
          <EditText
              android:layout_width="match_parent"

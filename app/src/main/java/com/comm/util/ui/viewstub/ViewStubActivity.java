@@ -11,20 +11,18 @@ public class ViewStubActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-         vsContent = findViewById(R.id.vs_content);
+        vsContent = findViewById(R.id.vs_content);
 
     }
 
-    @Override
-    protected int setLayoutId() {
-        return R.layout.activity_view_stub;
-    }
-
+    //@Override
+    //protected int setLayoutId() {
+    //    return R.layout.activity_view_stub;
+    //}
 
     @OnClick(R.id.bt_viewstub)
     public void btViewStub() {
         vsContent.inflate();
     }
-
 
 }

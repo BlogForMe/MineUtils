@@ -11,18 +11,17 @@ import com.comm.util.base.BaseActivity;
  */
 public class LaunchActivity extends BaseActivity {
 
-
     private final static String LOG_TAG = "com.comm.util.component.launchmode.in.process";
 
-    @Override
-    protected int setLayoutId() {
-        return R.layout.activity_lanch;
-    }
+    //@Override
+    //protected int setLayoutId() {
+    //    return R.layout.activity_lanch;
+    //}
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        findViewById(R.id.bt_hint_intent).setOnClickListener(v->{
+        findViewById(R.id.bt_hint_intent).setOnClickListener(v -> {
             Intent intent = new Intent(LOG_TAG);
             startActivity(intent);
         });

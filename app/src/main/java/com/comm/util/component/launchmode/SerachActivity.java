@@ -38,7 +38,7 @@ public class SerachActivity extends AppCompatActivity {
 
         findViewById(R.id.tv_cancel).setOnClickListener(v->{
             //                finish();
-            startActivity(new Intent(this, SecondActivity.class));
+            startActivity(new Intent(this, ActivityB.class));
         });
     }
 }

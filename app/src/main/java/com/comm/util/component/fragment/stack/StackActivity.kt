@@ -53,9 +53,9 @@ class StackActivity : BaseActivity() {
         }
     }
 
-    override fun setLayoutId(): Int {
-        return R.layout.activity_stack
-    }
+//    override fun setLayoutId(): Int {
+//        return R.layout.activity_stack
+//    }
 
     public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

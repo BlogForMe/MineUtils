@@ -17,9 +17,9 @@ class LifeActivity : BaseActivity() {
         initFragment()
     }
 
-    override fun setLayoutId(): Int {
-        return R.layout.activity_fragment
-    }
+//    override fun setLayoutId(): Int {
+//        return R.layout.activity_fragment
+//    }
 
     private fun initFragment() {
         var lifeFragment = supportFragmentManager.findFragmentById(R.id.fl_content)

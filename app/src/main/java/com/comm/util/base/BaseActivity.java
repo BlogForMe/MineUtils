@@ -23,7 +23,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate() taskId  " + getTaskId());
-        setContentView(setLayoutId());
         unBinder = ButterKnife.bind(this);
         initView();
     }
@@ -32,7 +31,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
 
-    protected abstract int setLayoutId();
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {

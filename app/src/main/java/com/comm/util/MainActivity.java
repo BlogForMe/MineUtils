@@ -15,7 +15,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.comm.util.component.launchmode.FirstActivity;
+import com.comm.util.component.launchmode.ActivityA;
 import com.comm.util.utils.JsonParser;
 
 /**
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void bt_lanchmode(View view) {
-        startActivity(new Intent(this, FirstActivity.class));
+        startActivity(new Intent(this, ActivityA.class));
     }
 
     private void parseData(){

@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".component.launchmode.SecondActivity">
+    tools:context=".component.launchmode.ActivityB">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SecondActivity"
-        android:textSize="40sp"/>
+        android:textSize="40sp" />
 
     <Button
         android:id="@+id/bt_back"
