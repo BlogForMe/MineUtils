@@ -1,24 +1,36 @@
 package com.comm.util.component.launchmode
 
 import android.app.ActivityManager
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.comm.util.base.BaseActivity
 import com.comm.util.databinding.ActivitySecondBinding
-import kotlinx.android.synthetic.main.activity_second.*
 import timber.log.Timber
 
-//@Route(path = ARouterManager.ACTIVITY_SECOND)
+/**
+ *              原文链接：https://blog.csdn.net/javazejian/article/details/52071885
+
+ */
 class ActivityB : BaseActivity() {
 
     val binding by lazy { ActivitySecondBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bt_go_third.setOnClickListener {
-            startActivity(Intent(this, ThirdActivity::class.java))
+//        bt_go_third.setOnClickListener {
+//            startActivity(Intent(this, ThirdActivity::class.java))
+//        }
+        setContentView(binding.root)
+        binding.btGoActivityd.setOnClickListener {
+            val intent = Intent(Intent.ACTION_MAIN)
+            intent.addCategory(Intent.CATEGORY_LAUNCHER)
+            val cn = ComponentName("com.john.kot", "com.john.kot.activity.ActivityD")
+            intent.component = cn
+            startActivity(intent)
         }
+
     }
 
 

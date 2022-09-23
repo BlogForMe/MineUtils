@@ -25,7 +25,8 @@
         android:layout_height="wrap_content"
         android:text="跳转第二个Activity" />
 
-    <androidx.appcompat.widget.AppCompatTextView
+    <Button
+        android:id="@+id/bt_activty_A"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Activiy A"

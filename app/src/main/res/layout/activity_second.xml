@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SecondActivity"
+        android:text="ACTIVITY B"
         android:textSize="40sp" />
 
     <Button
@@ -25,6 +25,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="跳转到ThirdActivity"
+        app:layout_constraintTop_toBottomOf="@+id/bt_back" />
+
+    <Button
+        android:id="@+id/bt_go_activityd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity B"
         app:layout_constraintTop_toBottomOf="@+id/bt_back" />
 
 

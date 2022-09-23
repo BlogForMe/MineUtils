@@ -1,11 +1,8 @@
 package com.comm.util.component.launchmode
 
-import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
-import android.view.View
-import com.comm.util.R
 import com.comm.util.base.BaseActivity
 import com.comm.util.databinding.ActivityFirstBinding
 import timber.log.Timber
@@ -19,6 +16,10 @@ class ActivityA : BaseActivity() {
             val getSaveDd = savedInstanceState.getString("savedata", "")
         }
         setContentView(binding.root)
+        binding.btActivtyA.setOnClickListener {
+            val intent = Intent(this, ActivityB::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
@@ -33,21 +34,21 @@ class ActivityA : BaseActivity() {
     }
 
     override fun initView() {
-        findViewById<View>(R.id.bt_dialog).setOnClickListener { v: View? ->
-            AlertDialog.Builder(this)
-                .setPositiveButton("确认") { dialog, which -> }
-                .setNegativeButton("取消") { dialog, which -> }.create().show()
-        }
-        findViewById<View>(R.id.bt_launch).setOnClickListener { v: View? ->
-            //                Intent intent = new Intent(FirstActivity.this, SerachActivity.class);
-            val intent = Intent(this, ActivityB::class.java)
-            //            startActivityForResult(intent, REQUEST_TAG_SEARCH_ROOM);
-            //            recreate();
-            //intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-            //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent)
-            startActivity(intent)
-        }
+//        findViewById<View>(R.id.bt_dialog).setOnClickListener { v: View? ->
+//            AlertDialog.Builder(this)
+//                .setPositiveButton("确认") { dialog, which -> }
+//                .setNegativeButton("取消") { dialog, which -> }.create().show()
+//        }
+//        findViewById<View>(R.id.bt_launch).setOnClickListener { v: View? ->
+//            //                Intent intent = new Intent(FirstActivity.this, SerachActivity.class);
+//            val intent = Intent(this, ActivityB::class.java)
+//            //            startActivityForResult(intent, REQUEST_TAG_SEARCH_ROOM);
+//            //            recreate();
+//            //intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+//            //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(intent)
+//            startActivity(intent)
+//        }
 
         //        FloatingActionButton fabButton =findViewById(R.id.fab_button);
         //        findViewById(R.id.fab_button).setOnClickListener(v->{
