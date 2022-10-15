@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.comm.util.databinding.ActivityDaggerXxBinding
 import javax.inject.Inject
 
+// https://www.bilibili.com/video/BV1eM4y1G7aR
 class DaggerxxActivity : AppCompatActivity() {
     private val binding by lazy { ActivityDaggerXxBinding.inflate(layoutInflater) }
     private val TAG = "DaggerxxActivity"

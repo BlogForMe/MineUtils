@@ -16,5 +16,5 @@ import dagger.Component
 @Component(modules = [HttpModule::class, DataBaseModule::class])
 interface MyComponent {
     //注入点
-    fun inject(activity: DaggerxxActivity)
+    fun inject(activity: DaggerxxActivity) // 这里不能用多态的语法，比如DaggerxxActivity的父类
 }
