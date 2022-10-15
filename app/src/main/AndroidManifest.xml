@@ -28,20 +28,35 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".work.ReloadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".work.GoogleTopUpActivity"
+            android:exported="true"
+            android:theme="@style/AgsAuthenticationTheme">
+            <intent-filter>
+                <action android:name="com.google.android.payments.standard.TOPUP_V2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".component.launchmode.ActivityA"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
             android:name=".dagger.xiangxue.DaggerxxActivity"
-            android:exported="true">
-
-        </activity>
-        <activity android:name=".ui.DisplayCountActivity">
-
-        </activity>
+            android:exported="true" />
+        <activity android:name=".ui.DisplayCountActivity" />
         <activity
             android:name=".ui.recycleview.divider.LineElementActivity"
             android:exported="true" />
         <activity
             android:name=".ui.StateBarActivity"
-            android:exported="true"></activity>
-        <activity android:name=".AppManagerActivity"></activity>
+            android:exported="true" />
+        <activity android:name=".AppManagerActivity" />
         <activity
             android:name=".dagger.dn2.MainActivity3"
             android:exported="true" />
@@ -112,15 +127,6 @@
         <activity android:name=".dagger.demo1.A01SimpleActivity" />
         <activity android:name=".component.activityresult.FirstResultActivity" />
         <activity android:name=".component.launchmode.SerachActivity" />
-        <activity
-            android:name=".component.launchmode.ActivityA"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".component.launchmode.ActivityB" />
         <activity android:name=".component.launchmode.ThirdActivity" />
         <activity android:name=".component.fragment.life.LifeActivity" />
@@ -151,7 +157,11 @@
         <activity
             android:name=".ui.constraint.ConstraintLayoutActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".component.fragment.stack.StackActivity" />
         <activity android:name=".webview.WebViewActivity" />

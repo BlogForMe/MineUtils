@@ -20,6 +20,8 @@ class ActivityA : BaseActivity() {
             val intent = Intent(this, ActivityB::class.java)
             startActivity(intent)
         }
+
+        binding.btActivtyFinish.setOnClickListener { finish() }
     }
 
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {

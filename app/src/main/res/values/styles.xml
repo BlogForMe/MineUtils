@@ -119,9 +119,13 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
-    <style name="DialogAnimation" >
+    <style name="DialogAnimation">
         <item name="android:windowEnterAnimation">@anim/anim_show</item>
         <item name="android:windowExitAnimation">@anim/anim_hide</item>
+    </style>
+
+    <style name="AgsAuthenticationTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
     </style>
 
 
