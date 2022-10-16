@@ -7,7 +7,6 @@
  * UpdateDate:     2021/9/25 7:19 PM
  * UpdateRemark:   Modify the description
  */
-package com.comm.util.dagger.dn.di;
+package com.comm.util.dagger.dn.di
 
-public class AInterfaceImpl01 implements AInterface{
-}
+class AInterfaceImpl01 : AInterface

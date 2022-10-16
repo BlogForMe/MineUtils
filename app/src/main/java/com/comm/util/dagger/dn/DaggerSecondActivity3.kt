@@ -22,12 +22,15 @@ class DaggerSecondActivity3 : AppCompatActivity() {
     @Inject
     lateinit var student: Student
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second2)
 
         DaggerApplicationComponent3.create().studentComponent().create().inject(this)
         Log.i(TAG, "student: $student ")
+
 
     }
 }

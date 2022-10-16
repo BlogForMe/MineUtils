@@ -10,6 +10,7 @@
 package com.comm.util.dagger.dn.di
 
 import com.comm.util.dagger.dn.DaggerSecondActivity3
+import com.comm.util.dagger.dn.DaggerSecondActivity4
 import dagger.Subcomponent
 
 @Subcomponent(modules = [StudentModule::class])
@@ -21,4 +22,5 @@ interface StudentComponent {
     }
 
     fun inject(activity: DaggerSecondActivity3)
+    fun inject(activity: DaggerSecondActivity4)
 }

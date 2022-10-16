@@ -7,20 +7,22 @@
  * UpdateDate:     2021/9/25 7:19 PM
  * UpdateRemark:   Modify the description
  */
-package com.comm.util.dagger.dn.di;
+package com.comm.util.dagger.dn.di
 
-import dagger.Binds;
-import dagger.Module;
-import dagger.Provides;
+import dagger.Binds
+import dagger.Module
+import dagger.Provides
 
 @Module
-public abstract class TestModule {
-
-    @Provides
-    static AInterfaceImpl01 provideAInterfaceImpl01(){
-        return new AInterfaceImpl01();
-    }
-
+abstract class TestModule {
     @Binds
-    abstract AInterface bindAInterface(AInterfaceImpl01 impl);
+    abstract fun bindAInterface(impl: AInterfaceImpl01): AInterface
+
+    companion object {
+        @JvmStatic
+        @Provides
+        fun provideAInterfaceImpl01(): AInterfaceImpl01 {
+            return AInterfaceImpl01()
+        }
+    }
 }
