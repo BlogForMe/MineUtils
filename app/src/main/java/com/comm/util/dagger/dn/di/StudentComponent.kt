@@ -7,18 +7,18 @@
  * UpdateDate:     2021/9/25 6:57 PM
  * UpdateRemark:   Modify the description
  */
-package com.comm.util.dagger.dn.di;
+package com.comm.util.dagger.dn.di
 
-import com.comm.util.dagger.dn.DaggerSecondActivity1;
-import dagger.Subcomponent;
+import com.comm.util.dagger.dn.DaggerSecondActivity3
+import dagger.Subcomponent
 
-@Subcomponent(modules = StudentModule.class)
-public interface StudentComponent {
-    void inject(DaggerSecondActivity1 secondActivity);
+@Subcomponent(modules = [StudentModule::class])
+interface StudentComponent {
 
     @Subcomponent.Factory
-    interface Factory{
-        StudentComponent create();
+    interface Factory {
+        fun create(): StudentComponent
     }
 
+    fun inject(activity: DaggerSecondActivity3)
 }

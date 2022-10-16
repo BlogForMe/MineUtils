@@ -62,6 +62,10 @@
         <activity
             android:name=".dagger.dn.DaggerUserActivity2"
             android:exported="true">
+        </activity>
+        <activity
+            android:name=".dagger.dn.DaggerSecondActivity3"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -69,7 +73,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".dagger.dn2.MainActivity3"
+            android:name=".dagger.dn2.MainActivity4"
             android:exported="true" />
         <activity
             android:name=".dagger.dn.DaggerUserActivity"

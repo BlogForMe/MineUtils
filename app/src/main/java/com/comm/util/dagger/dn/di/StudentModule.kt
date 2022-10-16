@@ -7,13 +7,15 @@
  * UpdateDate:     2021/9/25 7:08 PM
  * UpdateRemark:   Modify the description
  */
-package com.comm.util.dagger.dn.di;
+package com.comm.util.dagger.dn.di
 
-import dagger.Module;
+import dagger.Module
+import dagger.Provides
 
 @Module
-public class StudentModule {
-    Student provideStudent(){
-        return new Student();
+class StudentModule {
+    @Provides
+    fun provideStudent(): Student {
+        return Student()
     }
 }

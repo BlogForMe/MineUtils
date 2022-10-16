@@ -15,7 +15,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 
 @Singleton
-@Component(modules = AppModule.class)
-public interface ApplicationComponent3 {
-    void inject(MainActivity3 mainActivity);
+@Component(modules = AppModule4.class)
+public interface ApplicationComponent4 {
+    void inject(MainActivity4 mainActivity);
 }

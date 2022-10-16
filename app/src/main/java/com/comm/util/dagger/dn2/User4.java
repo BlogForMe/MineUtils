@@ -13,10 +13,10 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 @Singleton
-public class User3 {
+public class User4 {
 
     @Inject
-    public User3(){
+    public User4(){
 
     }
 

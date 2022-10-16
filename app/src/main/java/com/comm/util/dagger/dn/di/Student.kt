@@ -7,7 +7,6 @@
  * UpdateDate:     2021/9/25 6:56 PM
  * UpdateRemark:   Modify the description
  */
-package com.comm.util.dagger.dn.di;
+package com.comm.util.dagger.dn.di
 
-public class Student {
-}
+class Student 

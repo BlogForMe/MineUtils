@@ -7,17 +7,17 @@ import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 import com.comm.util.R;
 
-public class MainActivity3 extends AppCompatActivity {
+public class MainActivity4 extends AppCompatActivity {
     String TAG = "MainActivity3";
     @Inject
-    User3 user;
+    User4 user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         //DaggerApp
-        DaggerApplicationComponent3.create().inject(this);
+        DaggerApplicationComponent4.create().inject(this);
         Log.i(TAG, "onCreate: user= " + user);
     }
 

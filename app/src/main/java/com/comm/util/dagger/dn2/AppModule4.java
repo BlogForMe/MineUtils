@@ -13,10 +13,10 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class AppModule {
+public class AppModule4 {
 
     @Provides
-    User3 provideUser() {
-        return new User3();
+    User4 provideUser() {
+        return new User4();
     }
 }

@@ -7,9 +7,9 @@
  * UpdateDate:     2021/9/25 6:58 PM
  * UpdateRemark:   Modify the description
  */
-package com.comm.util.dagger.dn.di;
+package com.comm.util.dagger.dn.di
 
-//@Module(subcomponents = StudentComponent.class )
-public class SubComponentModule {
+import dagger.Module
 
-}
+@Module(subcomponents = [StudentComponent::class])
+class SubComponentModule 

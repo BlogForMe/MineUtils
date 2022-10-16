@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="清理应用DEV缓存"
         android:textSize="30sp"
-        tools:context=".dagger.dn2.MainActivity3" />
+        tools:context=".dagger.dn2.MainActivity4" />
 
     <Button
         android:id="@+id/go_seeting_sbx"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:text="清理应用SBX缓存"
         android:textSize="30sp"
-        tools:context=".dagger.dn2.MainActivity3" />
+        tools:context=".dagger.dn2.MainActivity4" />
 
     <Button
         android:id="@+id/go_seeting_sit"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:text="清理应用SIT缓存"
         android:textSize="30sp"
-        tools:context=".dagger.dn2.MainActivity3" />
+        tools:context=".dagger.dn2.MainActivity4" />
 
     <TextView
         android:layout_width="wrap_content"
