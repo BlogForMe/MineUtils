@@ -9,4 +9,9 @@
  */
 package com.comm.util.dagger.dn.di
 
-class Student 
+class Student constructor(val name: String?) {
+    constructor() : this(null)
+    override fun toString(): String {
+        return "Student(name=$name)"
+    }
+}

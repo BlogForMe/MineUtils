@@ -8,13 +8,19 @@ import com.comm.util.dagger.dn.di.AInterface
 import com.comm.util.dagger.dn.di.DaggerApplicationComponent3
 import com.comm.util.dagger.dn.di.Student
 import javax.inject.Inject
+import javax.inject.Named
 
 
 class DaggerSecondActivity4 : AppCompatActivity() {
     var TAG = javaClass.simpleName
 
+    @Named("student1")
     @Inject
-    lateinit var student: Student
+    lateinit var student1: Student
+
+    @Named("student2")
+    @Inject
+    lateinit var student2: Student
 
     @Inject
     lateinit var aInterface: AInterface
@@ -24,7 +30,8 @@ class DaggerSecondActivity4 : AppCompatActivity() {
         setContentView(R.layout.activity_second2)
 
         DaggerApplicationComponent3.create().studentComponent().create().inject(this)
-        Log.i(TAG, "student: $student ")
+        Log.i(TAG, "student1: $student1 ")
+        Log.i(TAG, "student2: $student2 ")
         Log.i(TAG, "aInterface: $aInterface ")
     }
 }
