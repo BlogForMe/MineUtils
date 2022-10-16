@@ -9,4 +9,5 @@
  */
 package com.comm.util.dagger.dn.di
 
-class User1  // 1.使用 @Inject注解在构造方法上；就是告知Dagger可以通过构造方法来创建并获取到User1的实例
+//如果 使用 @Inject注解在构造方法上；就是告知Dagger可以通过构造方法来创建并获取到User1的实例
+class User1
