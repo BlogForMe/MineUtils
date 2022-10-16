@@ -13,7 +13,7 @@ import com.comm.util.dagger.dn.DaggerUserActivity
 import dagger.Component
 
 @UserScope
-@Component(modules = [UserModule::class], dependencies = [ApplicationComponent1::class])
+@Component(modules = [UserModule::class])
 interface UserComponent1 {
     fun inject(activity: DaggerUserActivity)
 }

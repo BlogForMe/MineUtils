@@ -9,8 +9,7 @@
  */
 package com.comm.util.dagger.dn.di
 
-import com.comm.util.dagger.dn.DaggerActivity1
-import com.comm.util.dagger.dn.DaggerSecondActivity
+import com.comm.util.dagger.dn.DaggerSecondActivity1
 import dagger.Component
 import javax.inject.Singleton
 
@@ -18,6 +17,5 @@ import javax.inject.Singleton
 @Singleton // 设置作用域和ApplicationComponent组件的生命周期一致，NetModule设置@Singleton 那么ApplicationComponent也必须设置
 @Component(modules = [NetModule1::class]) //模块装载到组件上去
 interface ApplicationComponent1 {
-    fun inject(activity: DaggerActivity1) //指定目标类 //dependencies = {ApplicationComponent1.class}
-    fun inject(activity: DaggerSecondActivity) //dependencies = {ApplicationComponent1.class} 所以这里注释掉
+    fun inject(activity: DaggerSecondActivity1) //dependencies = {ApplicationComponent1.class} 所以这里注释掉
 }

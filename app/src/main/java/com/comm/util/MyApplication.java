@@ -6,8 +6,8 @@ import android.app.Application;
 import android.os.Environment;
 import com.android.util.AppUtil;
 import com.android.util.ToastUtil;
-import com.comm.util.dagger.dn.di.ApplicationComponent1;
-import com.comm.util.dagger.dn.di.DaggerApplicationComponent1;
+import com.comm.util.dagger.dn.di.ApplicationComponent2;
+import com.comm.util.dagger.dn.di.DaggerApplicationComponent2;
 import timber.log.Timber;
 
 /**
@@ -15,10 +15,10 @@ import timber.log.Timber;
  */
 
 public class MyApplication extends Application {
-    static ApplicationComponent1 applicationComponent = DaggerApplicationComponent1.create();
+    static ApplicationComponent2 applicationComponent = DaggerApplicationComponent2.create();
     private static MyApplication app;
 
-    public static ApplicationComponent1 getApplicationComponent1() {
+    public static ApplicationComponent2 getApplicationComponent2() {
         return applicationComponent;
     }
 

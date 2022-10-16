@@ -9,7 +9,7 @@
  */
 package com.comm.util.dagger.dn.di
 
-import com.comm.util.dagger.dn.DaggerActivity
+import com.comm.util.dagger.dn.DaggerActivity1
 import dagger.Component
 import javax.inject.Singleton
 
@@ -18,5 +18,5 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [NetModule::class]) //模块装载到组件上去
 interface ApplicationComponent {
-    fun inject(daggerActivity: DaggerActivity) //指定DaggerActivity作为要注入的目标类
+    fun inject(daggerActivity: DaggerActivity1) //指定DaggerActivity作为要注入的目标类
 }
