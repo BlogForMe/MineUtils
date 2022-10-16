@@ -28,6 +28,9 @@ class DaggerActivity : AppCompatActivity() {
     @Inject
     lateinit var apiService: ApiService
 
+    @Inject
+    lateinit var apiService2: ApiService
+
     //@Inject
     //ApiService apiService2;
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +44,7 @@ class DaggerActivity : AppCompatActivity() {
 //        Log.i(TAG, "user2: $user2")
 //        Log.i(TAG, "retrofit: $retrofit")
         Log.i(TAG, "apiService: $apiService")
-        //Log.i(TAG, "apiService2: " +apiService2);
+        Log.i(TAG, "apiService2: " +apiService2);
         startActivity(Intent(this, DaggerSecondActivity::class.java))
     }
 }

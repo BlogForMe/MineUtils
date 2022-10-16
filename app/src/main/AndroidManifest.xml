@@ -62,18 +62,20 @@
             android:exported="true" />
         <activity
             android:name=".dagger.dn.DaggerUserActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".dagger.dn.DaggerSecondActivity"
             android:exported="true" />
         <activity
             android:name=".dagger.dn.DaggerActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".dagger.dn.DaggerActivity1"
