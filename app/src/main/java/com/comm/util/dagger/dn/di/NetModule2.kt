@@ -7,35 +7,31 @@
  * UpdateDate:     2021/8/29 7:14 PM
  * UpdateRemark:   Modify the description
  */
-package com.comm.util.dagger.dn.di;
+package com.comm.util.dagger.dn.di
 
-import dagger.Module;
-import dagger.Provides;
-import okhttp3.OkHttpClient;
-import retrofit2.Retrofit;
+import android.app.Application
+import android.content.Context
+import dagger.Module
+import dagger.Provides
+import okhttp3.OkHttpClient
+import retrofit2.Retrofit
 
-//Dagger模块
 @Module
-public class NetModule2 {
+class NetModule2(var application: Application?=null) {
 
-    public User2 providerUser() {
-        return new User2();
+    @Provides
+    fun provideContext(): Context {
+        return application!!.applicationContext
     }
 
     //第二种方式告知Dagger,可以通过调用该方法来获取到注入对象的实例
-    //@Provides
-    //public Retrofit provideRetrofit() {
-    //    return new Retrofit.Builder()
-    //        .baseUrl("http://www.google.com")
-    //        .build();
-    //}
     @MyScope
     @Provides
-    public Retrofit provideRetrofit(OkHttpClient okHttpClient) {
-        return new Retrofit.Builder()
+    fun provideRetrofit(okHttpClient: OkHttpClient?): Retrofit {
+        return Retrofit.Builder()
             .client(okHttpClient)
             .baseUrl("http://www.google.com")
-            .build();
+            .build()
     }
 
     //Module已经知道怎么获取retrofit实例
@@ -44,15 +40,15 @@ public class NetModule2 {
     // 然后从当前容器直接获取
     @MyScope
     @Provides
-    public ApiService provideApiService(Retrofit retrofit) {
-        return retrofit.create(ApiService.class);
+    fun provideApiService(retrofit: Retrofit): ApiService {
+        return retrofit.create(ApiService::class.java)
     }
 
     //@Singleton是Dagger提供的一种作用域
     // 作用域就是用来管理Component来获取对象实例的生命周期
     @MyScope
     @Provides
-    public OkHttpClient provideOkHttpClient() {
-        return new OkHttpClient.Builder().build();
+    fun provideOkHttpClient(): OkHttpClient {
+        return OkHttpClient.Builder().build()
     }
 }

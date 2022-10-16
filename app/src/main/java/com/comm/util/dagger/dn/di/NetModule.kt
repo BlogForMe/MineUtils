@@ -15,12 +15,9 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import javax.inject.Singleton
 
-//Dagger模块
 @Module
-class NetModule {
-    fun providerUser(): User {
-        return User()
-    }
+class NetModule{
+
 
     //第二种方式告知Dagger,可以通过调用该方法来获取到注入对象的实例
     @Singleton

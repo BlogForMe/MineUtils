@@ -6,7 +6,6 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.comm.util.R
 import com.comm.util.dagger.dn.di.ApiService
-import com.comm.util.dagger.dn.di.DaggerApplicationComponent
 import com.comm.util.dagger.dn.di.User
 import retrofit2.Retrofit
 import javax.inject.Inject
@@ -37,8 +36,8 @@ class DaggerActivity1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dagger2)
         //4.执行注入动作
-        DaggerApplicationComponent.create()
-            .inject(this) //DaggerApplicationComponent相当于DaggerApplication的实现类
+//        DaggerApplicationComponent.create()
+//            .inject(this) //DaggerApplicationComponent相当于DaggerApplication的实现类
 
 //        Log.i(TAG, "user: $user")
 //        Log.i(TAG, "user2: $user2")

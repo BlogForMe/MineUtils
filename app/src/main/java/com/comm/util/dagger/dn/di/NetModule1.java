@@ -20,9 +20,6 @@ import retrofit2.Retrofit;
 @Module
 public class NetModule1 {
 
-    public User providerUser() {
-        return new User();
-    }
 
     //第二种方式告知Dagger,可以通过调用该方法来获取到注入对象的实例
     //@Provides

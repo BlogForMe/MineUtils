@@ -1,55 +1,38 @@
-package com.comm.util;
+package com.comm.util
 
-import com.alibaba.android.arouter.launcher.ARouter;
-
-import android.app.Application;
-import android.os.Environment;
-import com.android.util.AppUtil;
-import com.android.util.ToastUtil;
-import com.comm.util.dagger.dn.di.ApplicationComponent2;
-import com.comm.util.dagger.dn.di.DaggerApplicationComponent2;
-import timber.log.Timber;
+import android.app.Application
+import android.os.Environment
+import com.alibaba.android.arouter.launcher.ARouter
+import com.android.util.AppUtil
+import com.android.util.ToastUtil
+import com.comm.util.dagger.dn.di.ApplicationComponent2
+import com.comm.util.dagger.dn.di.DaggerApplicationComponent2
+import com.comm.util.dagger.dn.di.NetModule2
+import timber.log.Timber
+import timber.log.Timber.DebugTree
 
 /**
  * Created by jon on 12/9/17.
  */
-
-public class MyApplication extends Application {
-    static ApplicationComponent2 applicationComponent = DaggerApplicationComponent2.create();
-    private static MyApplication app;
-
-    public static ApplicationComponent2 getApplicationComponent2() {
-        return applicationComponent;
+class MyApplication : Application() {
+    companion object {
+        lateinit var applicationComponent2: ApplicationComponent2
     }
 
-    //Dagger
-    public static MyApplication getInstance() {
-        return app;
+    override fun onCreate() {
+        super.onCreate()
+        DaggerApplicationComponent2.builder().netModule2(NetModule2(this)).build()
+        applicationComponent2 = DaggerApplicationComponent2.create()
+
+        AppUtil.init(this)
+        ToastUtil.register(this)
+        Timber.plant(DebugTree())
+        ARouter.openLog() // Print log
+        ARouter.openDebug() // Turn on debugging mode (If you are running in
+        ARouter.init(this)
     }
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        app = this;
-        AppUtil.init(this);
-        ToastUtil.register(this);
-        Timber.plant(new Timber.DebugTree());
 
-        ARouter.openLog();     // Print log
-        ARouter.openDebug();   // Turn on debugging mode (If you are running in
-        //            InstantRun mode, you must turn on debug mode! Online version needs to be
-        //            closed, otherwise there is a security risk)
-        ARouter.init(this);
-        //        initGreenDao();
-    }
-
-    //static ApplicationComponent2 applicationComponent2 = DaggerApplicationComponent2.create();
-    //
-    //public static ApplicationComponent2 getApplicationComponent2() {
-    //    return applicationComponent2;
-    //}
-
-    //
     //    private void initGreenDao() {
     ////        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "dblearn.db");
     //        MigrationHelper.DEBUG = true;
@@ -58,20 +41,17 @@ public class MyApplication extends Application {
     //        DaoMaster daoMaster = new DaoMaster(db);
     //        daoSession = daoMaster.newSession();
     //    }
-
     //    public DaoSession getDaoSession() {
     //        return daoSession;
     //    }
-
-    private void initXlog() {
-        System.loadLibrary("c++_shared");
-        System.loadLibrary("marsxlog");
-
-        final String SDCARD = Environment.getExternalStorageDirectory().getAbsolutePath();
-        final String logPath = SDCARD + "/marssample/log";
+    private fun initXlog() {
+        System.loadLibrary("c++_shared")
+        System.loadLibrary("marsxlog")
+        val SDCARD = Environment.getExternalStorageDirectory().absolutePath
+        val logPath = "$SDCARD/marssample/log"
 
         // this is necessary, or may crash for SIGBUS
-        final String cachePath = this.getFilesDir() + "/xlog";
+        val cachePath = this.filesDir.toString() + "/xlog"
 
         //init xlog
         //if (BuildConfig.DEBUG) {
@@ -86,19 +66,6 @@ public class MyApplication extends Application {
         //}
         //
         //Log.setLogImp(new Xlog());
-
     }
 
-    private void inject() {
-        //        AppComponent appComponent = DaggerAppComponent.builder()
-        //                .appModule(new AppModule(this))
-        //                .build();
-        //        ComponentHolder.setAppComponent(appComponent);
-    }
-
-    @Override
-    public void onTerminate() {
-        super.onTerminate();
-        //Log.appenderClose();
-    }
 }

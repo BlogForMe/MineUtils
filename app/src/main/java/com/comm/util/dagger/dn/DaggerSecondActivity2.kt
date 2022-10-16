@@ -19,12 +19,13 @@ class DaggerSecondActivity2 : AppCompatActivity() {
     @Inject
     lateinit var apiService3: ApiService
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second2)
 
-         DaggerUserComponent2.builder().applicationComponent2(
-            MyApplication.getApplicationComponent2()
+        DaggerUserComponent2.builder().applicationComponent2(
+            MyApplication.applicationComponent2
         ).build().inject(this);
         //DaggerApplicationComponent相当于DaggerApplication的实现类
         //DaggerApplicationComponent1.create().inject(this);//DaggerApplicationComponent相当于DaggerApplication的实现类

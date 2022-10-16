@@ -1,5 +1,6 @@
 package com.comm.util.dagger.dn
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -29,11 +30,14 @@ class DaggerUserActivity2 : AppCompatActivity() {
 
     var userComponent: UserComponent2? = null
 
+    @Inject
+    lateinit var context: Context
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dagger_user)
         userComponent = DaggerUserComponent2.builder().applicationComponent2(
-            MyApplication.getApplicationComponent2()
+            MyApplication.applicationComponent2
         ).build()
         userComponent?.inject(this)
         Log.i(TAG, "user1: $user1")
@@ -41,6 +45,10 @@ class DaggerUserActivity2 : AppCompatActivity() {
 
         Log.i(TAG, "apiService1: $apiService1")
         Log.i(TAG, "apiService2: $apiService2")
+
+        Log.i(TAG, "context: $context")
         startActivity(Intent(this, DaggerSecondActivity2::class.java))
+
+
     }
 }
