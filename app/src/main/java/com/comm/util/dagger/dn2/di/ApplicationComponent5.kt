@@ -9,11 +9,12 @@
  */
 package com.comm.util.dagger.dn2.di
 
-import com.comm.util.dagger.dn2.MainActivity4
+import com.comm.util.dagger.dn2.MainActivity5
 import dagger.Component
+import javax.inject.Singleton
 
-
+@Singleton
 @Component
-interface ApplicationComponent4 {
-    fun inject(mainActivity: MainActivity4)
+interface ApplicationComponent5 {
+    fun inject(mainActivity: MainActivity5)
 }

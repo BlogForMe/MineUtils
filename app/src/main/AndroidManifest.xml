@@ -69,7 +69,7 @@
 
         </activity>
         <activity
-            android:name=".dagger.dn2.MainActivity4"
+            android:name=".dagger.dn2.MainActivity6"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
