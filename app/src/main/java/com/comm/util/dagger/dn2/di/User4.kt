@@ -7,7 +7,7 @@
  * UpdateDate:     2021/9/25 7:38 PM
  * UpdateRemark:   Modify the description
  */
-package com.comm.util.dagger.dn2
+package com.comm.util.dagger.dn2.di
 
 import javax.inject.Inject
 

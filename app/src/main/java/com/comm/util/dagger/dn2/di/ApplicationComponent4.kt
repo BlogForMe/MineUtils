@@ -7,8 +7,9 @@
  * UpdateDate:     2021/9/25 7:40 PM
  * UpdateRemark:   Modify the description
  */
-package com.comm.util.dagger.dn2
+package com.comm.util.dagger.dn2.di
 
+import com.comm.util.dagger.dn2.MainActivity4
 import dagger.Component
 
 
