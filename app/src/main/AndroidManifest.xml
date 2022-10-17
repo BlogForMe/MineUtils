@@ -66,15 +66,17 @@
         <activity
             android:name=".dagger.dn.DaggerSecondActivity4"
             android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".dagger.dn2.MainActivity4"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".dagger.dn2.MainActivity4"
-            android:exported="true" />
         <activity
             android:name=".dagger.dn.DaggerUserActivity"
             android:exported="true">

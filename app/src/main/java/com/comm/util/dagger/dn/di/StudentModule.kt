@@ -32,4 +32,17 @@ class StudentModule {
     fun provideStudent2(): Student {
         return Student("John")
     }
+
+
+    @StudentQualifier1 //  @Named 是Qualifier的实现
+    @Provides
+    fun provideQualifierStudent(): Student {
+        return Student()
+    }
+
+    @StudentQualifier2
+    @Provides
+    fun provideQualifierStudent2(): Student {
+        return Student("Qualifier2 John")
+    }
 }
